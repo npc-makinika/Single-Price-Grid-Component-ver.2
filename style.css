@@ -1,0 +1,240 @@
+/* ==========================
+   CSS Reset / Normalize
+=========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   Root / Variables
+=========================== */
+:root {
+  --font-base: 16px;
+  --font-family: 'Karla', sans-serif;
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-background: #afcec1;
+  --color-text: #212529;
+}
+
+/* ==========================
+   Base Styles
+=========================== */
+html {
+  font-size: var(--font-base);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: linear-gradient(346deg, #47b2b0, #6380c1 70%, #5f9d9c);
+  line-height: 1.6;
+}
+
+/* ==========================
+   Layout Helpers
+=========================== */
+.container {
+  max-width: 683px;
+  margin: 12rem auto;
+  background-color: #fff; /* White background like in the image */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Subtle shadow */
+  overflow: hidden; /* Keeps inner sections within the border radius */
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 1 0;
+}
+
+/* ==========================
+   Typography
+=========================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #018b8d;
+}
+
+h2 {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+}
+
+#intro h2 {
+  font-size: 1.2rem;
+  color: #adcb3b;
+  font-weight: 700;
+}
+
+.intro-text{
+  width: 536px;
+  margin-left: 1rem;
+}
+
+p {
+  width: 536px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* ==========================
+   Links & Buttons
+=========================== */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  padding: 0.5em 1em;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  width: 16rem;
+  height: 3rem;
+  margin-top: 1.4rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+/* ==========================
+   Utility Classes
+=========================== */
+
+#intro {
+  padding: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#section1, #section2 {
+  margin-left: 0; /* remove the -12px offsets */
+  padding: 3rem;
+}
+
+
+#section1 {
+  background-color: hsl(179, 62%, 43%);
+  color: #fff;
+}
+
+.pricing-box {
+  width: auto;
+} 
+
+.price {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+
+#section2 {
+  background-color: hsl(178.88deg 29.34% 47.49%);
+}
+
+#section1 h2 {
+  margin-bottom: 2rem;
+
+}
+.reasons {
+  margin-top: 1.6rem;
+}
+ 
+.reasons p {
+  font-size: 0.9rem;
+  line-height: 0.4rem;
+  color: ghostwhite;
+}
+
+/* Footer section */
+.attribution {
+    color: ghostwhite;
+    width: 100%;
+    padding: 20px;
+    margin-top: 42px;
+    text-align: center;
+    display: none;
+}
+
+
+
+/* ==========================
+   Media Queries (Mobile-First)
+=========================== */
+@media (max-width: 768px) {
+  .col-md {
+    flex: 1 1 0;
+  }
+  
+  .container {
+    width: 22rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+  p {
+    width: auto;
+    font-size: 0.9rem;
+    line-height: 2.2rem;
+  }
+
+  .intro-text{
+    width: auto;
+  }
+
+  #intro {
+    padding-bottom: 0.4rem;
+  }
+
+  #section1 p {
+    margin: 0;
+  }
+
+
+  #section1, #section2 {
+    padding-bottom: 1.7rem;
+
+  }
+
+  .intro-text {
+    width: auto;
+    margin-left: 0;
+  }
+
+   #section1, #section2 {
+    padding-left: 2rem;  /* or 0 if you want full width */
+    padding-right: 2rem; /* ensures text doesn’t touch edges */
+  }
+  
+}
+
