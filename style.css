@@ -125,6 +125,15 @@ button:hover {
   background-color: var(--color-secondary);
 }
 
+.register-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.4rem;
+  display: none;
+}
+
+
+
 /* ==========================
    Utility Classes
 =========================== */

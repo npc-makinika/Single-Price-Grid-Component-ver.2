@@ -1,32 +1,71 @@
-// Select the Sign Up button in your pricing box
-const signUpBtn = document.querySelector('#section1 button');
+// Select buttons and form
+const signUpBtn = document.querySelector('#section1 button'); // Sign Up button
+const registerFormContainer = document.querySelector('.register-form'); // Form container
+const registerForm = document.getElementById('registerForm'); // The <form>
 
-// When the Sign Up button is clicked
-signUpBtn.addEventListener('click', function() {
-
-    // HTML code for the signup form as a string
-    const formHTML = `
-        <form>
-            <input placeholder="Username"><br>  <!-- Username input -->
-            <input type="email" placeholder="Email"><br>  <!-- Email input -->
-            <input type="password" placeholder="Password"><br>  <!-- Password input -->
-            <button type="button" id="registerBtn">Register</button> <!-- Register button -->
-        </form>
-    `;
-
-    // Insert the form right after the Sign Up button
-    signUpBtn.insertAdjacentHTML('afterend', formHTML);
-
-    // Select the Register button we just added and add a click event
-    document.getElementById('registerBtn').addEventListener('click', function() {
-        // Get the value entered in the first input (Username)
-        const username = document.querySelector('input').value;
-
-        // Show a simple alert with the entered username
-        alert('Sign up successful' + username);
-    });
-    
-     
-
+// When Sign Up is clicked → show form
+signUpBtn.addEventListener('click', () => {
+    signUpBtn.style.display = 'none'; // hide Sign Up button
+    registerFormContainer.style.display = 'flex'; // show form
 });
+
+// When Register (form submit) → hide form and show button again
+registerForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // prevent page reload
+
+    signUpBtn.textContent = 'Registered'; // Change button text to 'Registered'
+
+    // After 10 seconds, revert back to "Sign Up"
+    setTimeout(() => {
+        signUpBtn.textContent = 'Sign Up';
+    }, 10000); // 10 seconds
+
+    registerFormContainer.style.display = 'none'; // hide form
+    signUpBtn.style.display = 'block'; // show Sign Up button again
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
