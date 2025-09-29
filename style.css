@@ -125,6 +125,9 @@ button:hover {
   background-color: var(--color-secondary);
 }
 
+/* ==========================
+   form section
+=========================== */
 .register-form {
   display: flex;
   flex-direction: column;
@@ -253,4 +256,5 @@ button:hover {
   }
   
 }
+
 
