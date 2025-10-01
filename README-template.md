@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/npc-makinika/Single-Price-Grid-Component-ver.2.git](https://github.com/npc-makinika/Single-Price-Grid-Component-ver.2.git)
-- Live Site URL: [https://npc-makinika.github.io/Single-Price-Grid-Component-ver.2/](hhttps://npc-makinika.github.io/Single-Price-Grid-Component-ver.2/)
+- Live Site URL: [https://npc-makinika.github.io/Single-Price-Grid-Component-ver.2/](hhttps://npc-makinika.github.io/Single-Price-Grid-Component-ver.2)
 
 ## My process
 
